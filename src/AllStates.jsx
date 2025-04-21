@@ -42,10 +42,10 @@ function AllStates() {
         <div className = "container">
         {
           filteredStates.map((state)=>
-            <Link className="stateCard" key={state.label} to={`/state/${state.value}`} >
+            <div className="stateCard" key={state.label} onClick={()=>navigate(`/state/${state.value}`)} >
               <h2>{state.label}</h2>
               <p>{state.emoji}</p>
-            </Link>
+            </div>
           )
         }
         </div>
